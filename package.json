@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "tsc --noEmit",
-    "git": "git"
+    "git": "git",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
