@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -7,7 +10,7 @@
 
 @layer base {
   body {
-    @apply m-0 p-0 transition-colors duration-300;
+    @apply m-0 p-0 transition-colors duration-300 bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
   }
 }
 
@@ -79,5 +82,3 @@
 .markdown-body strong {
   @apply font-bold text-zinc-800 dark:text-zinc-200 block mt-4 first:mt-0 mb-1 uppercase text-[10px] tracking-wider;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');

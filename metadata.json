@@ -1,0 +1,8 @@
+{
+  "name": "Anildo Gomes - Portfolio",
+  "description": "Portfolio profissional de Anildo Gomes: Especialista em Educação, Negócios & Tecnologia.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

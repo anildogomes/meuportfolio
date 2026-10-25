@@ -11,10 +11,7 @@ import {
   Code, 
   User,
   ChevronRight,
-  Github,
-  Linkedin,
   Mail,
-  Instagram,
   Database,
   Server,
   Palette,
@@ -31,22 +28,43 @@ import {
 import { translations, Language } from './translations';
 import Markdown from 'react-markdown';
 
+const Github = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+const Linkedin = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const Instagram = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export default function App() {
   const [lang, setLang] = useState<Language>('pt');
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
   const [activeSection, setActiveSection] = useState('about');
   const [isMobile, setIsMobile] = useState(false);
 
   const t = translations[lang];
-
-  // Initial theme setup
-  useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) {
-      setIsDark(true);
-    }
-  }, []);
 
   // Theme application
   useEffect(() => {
@@ -180,11 +198,13 @@ export default function App() {
             </div>
 
             <button 
+              type="button"
               onClick={toggleDark}
-              className="p-2 md:p-2.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 active:scale-90 relative z-[60]"
-              title="Toggle Dark Mode"
+              className="p-2 md:p-2.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 active:scale-90 cursor-pointer relative z-[60]"
+              title={isDark ? "Modo Claro" : "Modo Escuro"}
+              aria-label="Toggle Dark Mode"
             >
-              {isDark ? <Sun size={20} className="md:w-[22px] md:h-[22px]" /> : <Moon size={20} className="md:w-[22px] md:h-[22px]" />}
+              {isDark ? <Sun size={20} className="md:w-[22px] md:h-[22px] text-amber-400" /> : <Moon size={20} className="md:w-[22px] md:h-[22px]" />}
             </button>
           </div>
         </div>

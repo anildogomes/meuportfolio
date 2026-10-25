@@ -1,14 +1,31 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anildo Gomes</title>
-    <script type="module" crossorigin src="./assets/index-Bb3CZHqI.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BxJmOMzZ.css">
+    <title>Anildo Gomes - Portfolio</title>
+    <meta name="description" content="Portfolio profissional de Anildo Gomes: Especialista em Educação, Negócios & Tecnologia." />
+    <meta property="og:title" content="Anildo Gomes - Portfolio" />
+    <meta property="og:description" content="Portfolio profissional de Anildo Gomes: Especialista em Educação, Negócios & Tecnologia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
   </body>
 </html>
-
