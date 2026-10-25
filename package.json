@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "tsc --noEmit",
     "git": "git",
-    "build:pages": "node scripts/build-pages.mjs"
+    "build:pages": "node scripts/build-pages.mjs",
+    "check-deploy": "node scripts/check-deploy.mjs",
+    "verify-site": "node scripts/verify-site.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
