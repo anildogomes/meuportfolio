@@ -5,7 +5,6 @@ export const translations = {
       educator: "Educador",
       business: "Negócios",
       tech: "Tecnologia",
-      apps: "Meus Apps",
     },
     hero: {
       greeting: "Olá, eu sou",
@@ -207,71 +206,6 @@ export const translations = {
       },
       viewProject: "Visualizar Projeto",
     },
-    apps: {
-      title: "Meus Apps",
-      description: "Pequenos projetos pessoais que desenvolvo por curiosidade e para resolver problemas do dia a dia. Experimentos práticos que nascem da minha rotina de educador e desenvolvedor.",
-      openApp: "Abrir App",
-      backToApps: "Voltar para Meus Apps",
-      status: {
-        ready: "Disponível",
-        soon: "Em breve",
-      },
-      featuresTitle: "Recursos",
-      items: [
-        {
-          id: "inotas",
-          name: "iNOTAS",
-          tagline: "Gestão rápida de notas de alunos",
-          description: "Um app simples e rápido para registrar, acompanhar e fechar as notas de uma turma. Tudo roda no navegador, sem servidor e sem cadastro: os dados ficam salvos no próprio dispositivo.",
-          status: "ready",
-          tags: ["React", "TypeScript", "LocalStorage", "Offline-first"],
-          features: {
-            title: "Recursos",
-            items: [
-              "Cadastro rápido de alunos por nota (sem planilha)",
-              "Três avaliações por aluno com média automática",
-              "Situação calculada automaticamente (aprovado/reprovado)",
-              "Painel com média da turma, aprovados e reprovados",
-              "Ordenação por nome ou por média",
-              "Dados salvos localmente no navegador (funciona offline)",
-              "Exportação da tabela de notas em CSV"
-            ]
-          }
-        }
-      ]
-    },
-    inotas: {
-      title: "iNOTAS",
-      subtitle: "Gestão rápida de notas de alunos",
-      addStudent: "Adicionar aluno",
-      studentName: "Nome do aluno",
-      namePlaceholder: "Ex.: Maria Souza",
-      grades: "Notas",
-      grade1: "Avaliação 1",
-      grade2: "Avaliação 2",
-      grade3: "Avaliação 3",
-      average: "Média",
-      status: "Situação",
-      approved: "Aprovado",
-      repassed: "Reprovado",
-      actions: "Ações",
-      remove: "Remover",
-      clearAll: "Limpar tudo",
-      export: "Exportar CSV",
-      empty: "Nenhum aluno cadastrado ainda. Adicione o primeiro aluno acima.",
-      dashboard: "Resumo da turma",
-      totalStudents: "Alunos",
-      classAverage: "Média da turma",
-      approvedCount: "Aprovados",
-      repassedCount: "Reprovados",
-      approvalLimit: "Média mínima para aprovação",
-      limitHint: "Ajuste o critério de aprovação. A média da turma é atualizada em tempo real.",
-      add: "Adicionar",
-      invalidGrades: "Preencha o nome e use notas de 0 a 100.",
-      sortBy: "Ordenar por",
-      sortName: "Nome",
-      sortAverage: "Média",
-    },
     footer: {
       rights: "Todos os direitos reservados.",
     }
@@ -282,7 +216,6 @@ export const translations = {
       educator: "Educator",
       business: "Business",
       tech: "Technology",
-      apps: "My Apps",
     },
     hero: {
       greeting: "Hi, I am",
@@ -483,71 +416,6 @@ export const translations = {
         items: ["HTML", "CSS", "Javascript", "Tailwind", "React", "Node JS", "Java", "Python", "MongoDB", "PostgreSQL"]
       },
       viewProject: "View Project",
-    },
-    apps: {
-      title: "My Apps",
-      description: "Small personal projects I build out of curiosity and to solve day-to-day problems. Practical experiments born from my routine as a teacher and developer.",
-      openApp: "Open App",
-      backToApps: "Back to My Apps",
-      status: {
-        ready: "Available",
-        soon: "Coming soon",
-      },
-      featuresTitle: "Features",
-      items: [
-        {
-          id: "inotas",
-          name: "iNOTAS",
-          tagline: "Fast student grade tracking",
-          description: "A simple and fast app to record, track and close the grades of a class. Everything runs in the browser, with no server and no sign-up: the data stays on the device.",
-          status: "ready",
-          tags: ["React", "TypeScript", "LocalStorage", "Offline-first"],
-          features: {
-            title: "Features",
-            items: [
-              "Quick student enrollment per grade (no spreadsheet)",
-              "Three assessments per student with automatic average",
-              "Automatic status (approved/failed)",
-              "Dashboard with class average, approved and failed counts",
-              "Sorting by name or by average",
-              "Data saved locally in the browser (works offline)",
-              "Export of the grade table to CSV"
-            ]
-          }
-        }
-      ]
-    },
-    inotas: {
-      title: "iNOTAS",
-      subtitle: "Fast student grade tracking",
-      addStudent: "Add student",
-      studentName: "Student name",
-      namePlaceholder: "e.g. Maria Souza",
-      grades: "Grades",
-      grade1: "Assessment 1",
-      grade2: "Assessment 2",
-      grade3: "Assessment 3",
-      average: "Average",
-      status: "Status",
-      approved: "Approved",
-      repassed: "Failed",
-      actions: "Actions",
-      remove: "Remove",
-      clearAll: "Clear all",
-      export: "Export CSV",
-      empty: "No student registered yet. Add the first student above.",
-      dashboard: "Class summary",
-      totalStudents: "Students",
-      classAverage: "Class average",
-      approvedCount: "Approved",
-      repassedCount: "Failed",
-      approvalLimit: "Minimum average for approval",
-      limitHint: "Adjust the approval threshold. The class average updates in real time.",
-      add: "Add",
-      invalidGrades: "Fill in the name and use grades from 0 to 100.",
-      sortBy: "Sort by",
-      sortName: "Name",
-      sortAverage: "Average",
     },
     footer: {
       rights: "All rights reserved.",

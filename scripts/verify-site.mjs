@@ -16,5 +16,5 @@ const check = async (ref, needle) => {
 
 console.log('index.html publicado:');
 for (const ref of [...html.matchAll(/(?:src|href)="(\/meuportfolio\/[^"]+)"/g)].map((m) => m[1])) {
-  await check(ref, ref.endsWith('.js') ? 'inotas.students' : 'font-display');
+  await check(ref, ref.endsWith('.js') ? 'Anildo Gomes' : 'font-display');
 }
